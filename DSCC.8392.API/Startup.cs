@@ -1,7 +1,12 @@
+
+using DSCC._8392.DAL.Context;
+using DSCC._8392.DAL.Repositories;
+using DSCC._8392.Domain.Contracts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -32,6 +37,9 @@ namespace DSCC._8392.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "DSCC._8392.API", Version = "v1" });
             });
+            services.AddDbContext<LibraryDbContext>(o => o.UseSqlServer(Configuration.GetConnectionString("LibraryDB")));
+            services.AddScoped<DbContext, LibraryDbContext>();
+            services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

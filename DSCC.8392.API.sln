@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSCC.8392.API", "DSCC.8392.API\DSCC.8392.API.csproj", "{3237DEB9-A2FA-4573-B7EB-C5300A681EB7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSCC.8392.DAL.EF", "DSCC.8392.DAL\DSCC.8392.DAL.EF.csproj", "{CA23F7C6-BF6E-488E-8271-1C2B9EE3D681}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSCC.8392.Domain", "DSCC.8392.Domain\DSCC.8392.Domain.csproj", "{39EE9BD6-F8CE-4B17-9067-D85F1FCB4FFD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{3237DEB9-A2FA-4573-B7EB-C5300A681EB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3237DEB9-A2FA-4573-B7EB-C5300A681EB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3237DEB9-A2FA-4573-B7EB-C5300A681EB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA23F7C6-BF6E-488E-8271-1C2B9EE3D681}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA23F7C6-BF6E-488E-8271-1C2B9EE3D681}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA23F7C6-BF6E-488E-8271-1C2B9EE3D681}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA23F7C6-BF6E-488E-8271-1C2B9EE3D681}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39EE9BD6-F8CE-4B17-9067-D85F1FCB4FFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39EE9BD6-F8CE-4B17-9067-D85F1FCB4FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39EE9BD6-F8CE-4B17-9067-D85F1FCB4FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39EE9BD6-F8CE-4B17-9067-D85F1FCB4FFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
