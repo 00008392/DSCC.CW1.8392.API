@@ -18,9 +18,11 @@ namespace DSCC._8392.API.Controllers
     public class BooksController : ControllerBase
     {
         private readonly IRepository<Book> _bookRepository;
-        public BooksController(IRepository<Book> bookRepository)
+        private readonly IRepository<Genre> _genreRepository;
+        public BooksController(IRepository<Book> bookRepository, IRepository<Genre> genreRepository)
         {
             _bookRepository = bookRepository;
+            _genreRepository = genreRepository;
         }
         // GET: api/books
         [HttpGet]
@@ -30,6 +32,12 @@ namespace DSCC._8392.API.Controllers
             return new OkObjectResult(books);
         }
 
+        [HttpGet("genres")]
+        public async Task<IActionResult> GetGenres()
+        {
+            var genres = await _genreRepository.GetItemsAsync();
+            return new OkObjectResult(genres);
+        }
         // GET api/books/5
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
