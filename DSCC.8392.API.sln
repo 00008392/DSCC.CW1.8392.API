@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DSCC.8392.DAL.EF", "DSCC.83
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DSCC.8392.Domain", "DSCC.8392.Domain\DSCC.8392.Domain.csproj", "{39EE9BD6-F8CE-4B17-9067-D85F1FCB4FFD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Publish", "Publish", "{CC538B81-CF26-415A-BCD8-76853B9FE36C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
