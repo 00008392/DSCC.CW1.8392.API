@@ -1,0 +1,17 @@
+version: 0.0
+os: linux
+files:
+  - source: /publish_output
+    destination: /var/www/DCSS_8392_API
+  - source: scripts/8392_API.service
+    destination: /etc/systemd/system
+hooks:
+    ApplicationStop:
+      - location: scripts/application_stop.sh
+        timeout: 10
+    BeforeInstall:
+      - location: scripts/before-install.sh
+        timeout: 10
+    ApplicationStart:
+      - location: scripts/application_start.sh
+        timeout: 10

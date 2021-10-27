@@ -9,7 +9,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DSCC.8392.DAL.EF", "DSCC.83
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DSCC.8392.Domain", "DSCC.8392.Domain\DSCC.8392.Domain.csproj", "{39EE9BD6-F8CE-4B17-9067-D85F1FCB4FFD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Publish", "Publish", "{CC538B81-CF26-415A-BCD8-76853B9FE36C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{82DB6675-C19D-46A5-B842-21F1220719CC}"
+	ProjectSection(SolutionItems) = preProject
+		Appspec.yml = Appspec.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{54AECE1C-3F0A-4370-B634-5B92893838BE}"
+	ProjectSection(SolutionItems) = preProject
+		scripts\8392_API.service = scripts\8392_API.service
+		scripts\application_start.sh = scripts\application_start.sh
+		scripts\application_stop.sh = scripts\application_stop.sh
+		scripts\before_install.sh = scripts\before_install.sh
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

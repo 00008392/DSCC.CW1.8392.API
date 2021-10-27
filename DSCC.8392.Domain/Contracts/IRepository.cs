@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace DSCC._8392.Domain.Contracts
 {
+    //implementation is in DAL, but contract should be defined in domain layer
     public interface IRepository<T> where T : BaseEntity
     {
         Task InsertItemAsync(T item);

@@ -2,6 +2,7 @@
 
 namespace DSCC._8392.DAL.Migrations
 {
+    //migrations were created in order not to create database tables manually
     public partial class InitialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)

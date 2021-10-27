@@ -37,8 +37,10 @@ namespace DSCC._8392.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "DSCC._8392.API", Version = "v1" });
             });
+            //register DbContext
             services.AddDbContext<LibraryDbContext>(o => o.UseSqlServer(Configuration.GetConnectionString("LibraryDB")));
             services.AddScoped<DbContext, LibraryDbContext>();
+            //register repository
             services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
         }
 

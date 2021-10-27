@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace DSCC._8392.DAL.Repositories
 {
+    //repository implementation for entities inheriting from BaseEntity
     public class GenericRepository<T> : IRepository<T> where T : BaseEntity
     {
         private readonly DbContext _context;
@@ -36,7 +37,8 @@ namespace DSCC._8392.DAL.Repositories
             _dbSet.Remove(item);
             await _context.SaveChangesAsync();
         }
-
+        //if entity is connected to another entity (through FK), it is possible to load related entity 
+        //if includes are indicated
         public async Task<T> GetItemByIdAsync(int id, params Expression<Func<T, object>>[] includes)
         {
             return await GetDbSetWithRelatedTables(includes).SingleOrDefaultAsync(t => t.Id == id);
@@ -51,7 +53,7 @@ namespace DSCC._8392.DAL.Repositories
         {
             return _dbSet.Any(t => t.Id == id);
         }
-
+        //method for loading related entities
         private IQueryable<T> GetDbSetWithRelatedTables(params Expression<Func<T, object>>[] includes)
         {
             IQueryable<T> query = _dbSet.AsQueryable();
@@ -60,7 +62,7 @@ namespace DSCC._8392.DAL.Repositories
                 query = includes.Aggregate(query,
                   (current, include) => current.Include(include));
             }
-
+            //if includes are not indicated, return entities without related entities
             return query;
         }
     }

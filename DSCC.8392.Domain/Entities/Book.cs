@@ -14,7 +14,6 @@ namespace DSCC._8392.Domain.Entities
         public string Description { get; set; }
         [Required]
         public string Author { get; set; }
-        [Required]
         public int IssueYear { get; set; }
         [Required]
         public int GenreId { get; set; }

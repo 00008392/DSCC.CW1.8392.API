@@ -1,0 +1,17 @@
+[Unit]
+Description=ASP.NET Core microservvice web API on Linux
+
+[Service]
+WorkingDirectory=/var/www/DCSS_8392_API
+ExecStart=/usr/bin/dotnet /var/www/DCSS_8392_API/DSCC.8392.API.dll
+Restart=always
+RestartSec=10
+KillSignal=SIGINT
+SyslogIdentifier=8392-api
+Environment=ASPNETCORE_ENVIRONMENT=Production
+Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
+Environment=ASPNETCORE_URLS=http://*:80
+
+[Install]
+WantedBy=multi-user.target
+
