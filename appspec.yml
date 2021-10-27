@@ -10,7 +10,7 @@ hooks:
       - location: scripts/application_stop.sh
         timeout: 10
     BeforeInstall:
-      - location: scripts/before-install.sh
+      - location: scripts/before_install.sh
         timeout: 10
     ApplicationStart:
       - location: scripts/application_start.sh
