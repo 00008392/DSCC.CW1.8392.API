@@ -3,7 +3,7 @@
 Description=ASP.NET Core microservice web API on Linux
 
 [Service]
-WorkingDirectory=/var/www/DCSS_8392_API
+WorkingDirectory=/var/www/DCSS_8392_API_publish
 ExecStart=/usr/bin/dotnet /var/www/DCSS_8392_API_publish/DSCC.8392.API.dll
 Restart=always
 # Restart service after 10 seconds if the dotnet service crashes:
