@@ -1,7 +1,9 @@
 version: 0.0
 os: linux
 files:
-  - source: /publish_output
+  #- source: /publish_output
+  #  destination: /var/www/DCSS_8392_API
+  - source: /**/*
     destination: /var/www/DCSS_8392_API
   - source: scripts/8392_API.service
     destination: /etc/systemd/system
